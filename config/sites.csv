@@ -1,0 +1,3 @@
+name	list_url	link_selector	base_url	date_regex	pages		
+payloadspace	https://payloadspace.com/news/	h2 a	https://payloadspace.com	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""	3
+satnews	https://news.satnews.com/	h2 a	https://news.satnews.com/	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""	3
