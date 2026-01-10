@@ -1,0 +1,67 @@
+name: Orbitways Daily News (RSS → PDF → Email)
+
+on:
+  schedule:
+    # GitHub cron is UTC. Example: 06:35 Paris (winter = UTC+1) -> 05:35 UTC.
+    # Adjust as needed.
+    - cron: "35 5 * * *"
+  workflow_dispatch:
+
+jobs:
+  run-daily-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # Optional but useful: persist seen_links.txt across runs (otherwise dedup resets daily)
+      - name: Restore seen_links cache
+        uses: actions/cache@v4
+        with:
+          path: seen_links.txt
+          key: orbitways-seen-links
+
+      - name: Generate local RSS feeds (web2rss)
+        run: |
+          mkdir -p rss
+          python web2rss.py --config config/sites.csv --outdir rss
+
+      - name: Generate PDF + send email (digest)
+        env:
+          OW_SMTP_HOST: ${{ secrets.OW_SMTP_HOST }}
+          OW_SMTP_PORT: ${{ secrets.OW_SMTP_PORT }}
+          OW_SMTP_USER: ${{ secrets.OW_SMTP_USER }}
+          OW_SMTP_PASS: ${{ secrets.OW_SMTP_PASS }}
+          OW_MAIL_FROM: ${{ secrets.OW_MAIL_FROM }}
+          OW_MAIL_TO: ${{ secrets.OW_MAIL_TO }}
+        run: |
+          mkdir -p output
+          python orbitways_daily_digest_v8.py \
+            --xlsx Feed.xlsx \
+            --outdir output \
+            --local-rss-dir rss
+
+      - name: Upload PDF artifact (archive)
+        uses: actions/upload-artifact@v4
+        with:
+          name: orbitways-daily-news-${{ github.run_number }}
+          path: output/*.pdf
+          retention-days: 30
+
+      - name: Save seen_links cache
+        uses: actions/cache@v4
+        with:
+          path: seen_links.txt
+          key: orbitways-seen-links
