@@ -1,0 +1,11 @@
+requests
+beautifulsoup4
+python-dateutil
+feedgen
+pandas
+openpyxl
+feedparser
+reportlab
+python-dotenv
+readability-lxml
+lxml
