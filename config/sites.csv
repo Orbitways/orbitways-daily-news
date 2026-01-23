@@ -1,19 +1,20 @@
-"name	list_url	link_selector	base_url	date_regex	pages		"
-"payloadspace	https://payloadspace.com/news/	h2 a	https://payloadspace.com	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"satnews	https://news.satnews.com/	h2 a	https://news.satnews.com/	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"spacenews	https://spacenews.com/ 	h2 a	https://spacenews.com/ 	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"SatelliteToday	https://www.satellitetoday.com/   	h2 a	https://www.satellitetoday.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"Nasaspaceflight	    https://www.nasaspaceflight.com/   	h2 a	https://www.nasaspaceflight.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"universetoday	    https://www.universetoday.com/   	h2 a	https://www.universetoday.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"spaceref	    https://spaceref.com/   	h2 a	https://spaceref.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"space	    https://www.space.com/   	h2 a	https://www.space.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"earthsky	   https://earthsky.org/   	h2 a	https://earthsky.org/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"phys	    https://phys.org/   	h2 a	https://phys.org/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"spacedaily	    https://www.spacedaily.com/   	h2 a	https://www.spacedaily.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"spaceflightnow	    https://spaceflightnow.com/   	h2 a	https://spaceflightnow.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"spaceref	    https://spaceref.com/   	h2 a	https://spaceref.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"americaspace	    https://www.americaspace.com/   	h2 a	https://www.americaspace.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"spacefoundation	    https://www.spacefoundation.org/   	h2 a	https://www.spacefoundation.org/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"satellitetoday	    https://www.satellitetoday.com/   	h2 a	https://www.satellitetoday.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"spacewatch	    https://spacewatch.global/   	h2 a	https://spacewatch.global/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
-"breakdefense	    https://breakingdefense.com/category/space/   	h2 a	https://breakingdefense.com/category/space/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3"
+name	list_url	link_selector	base_url	date_regex	pages		
+payloadspace	https://payloadspace.com/news/	h2 a	https://payloadspace.com	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+satnews	https://news.satnews.com/	h2 a	https://news.satnews.com/	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+spacenews	https://spacenews.com/ 	h2 a	https://spacenews.com/ 	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+SatelliteToday	https://www.satellitetoday.com/   	h2 a	https://www.satellitetoday.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+Nasaspaceflight	    https://www.nasaspaceflight.com/   	h2 a	https://www.nasaspaceflight.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+universetoday	    https://www.universetoday.com/   	h2 a	https://www.universetoday.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+spaceref	    https://spaceref.com/   	h2 a	https://spaceref.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+space	    https://www.space.com/   	h2 a	https://www.space.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+earthsky	   https://earthsky.org/   	h2 a	https://earthsky.org/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+phys	    https://phys.org/   	h2 a	https://phys.org/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+spacedaily	    https://www.spacedaily.com/   	h2 a	https://www.spacedaily.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+spaceflightnow	    https://spaceflightnow.com/   	h2 a	https://spaceflightnow.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+spaceref	    https://spaceref.com/   	h2 a	https://spaceref.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+americaspace	    https://www.americaspace.com/   	h2 a	https://www.americaspace.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+spacefoundation	    https://www.spacefoundation.org/   	h2 a	https://www.spacefoundation.org/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+satellitetoday	    https://www.satellitetoday.com/   	h2 a	https://www.satellitetoday.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+spacewatch	    https://spacewatch.global/   	h2 a	https://spacewatch.global/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+breakdefense	    https://breakingdefense.com/category/space/   	h2 a	https://breakingdefense.com/category/space/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
+
