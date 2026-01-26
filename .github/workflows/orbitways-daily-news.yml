@@ -27,11 +27,13 @@ jobs:
           pip install -r requirements.txt
 
       # Optional but useful: persist seen_links.txt across runs (otherwise dedup resets daily)
-      - name: Restore seen_links cache
-        uses: actions/cache@v4
+        - name: Restore seen_links.txt cache
+        uses: actions/cache/restore@v4
         with:
           path: seen_links.txt
-          key: orbitways-seen-links
+          key: seen-links-${{ runner.os }}-${{ hashFiles('seen_links.txt') }}
+          restore-keys: |
+            seen-links-${{ runner.os }}-
 
       - name: Generate local RSS feeds (web2rss)
         run: |
@@ -60,8 +62,16 @@ jobs:
           path: output/*.pdf
           retention-days: 30
 
-      - name: Save seen_links cache
-        uses: actions/cache@v4
+      - name: Debug seen_links.txt
+        run: |
+          echo "== seen_links.txt status =="
+          ls -l seen_links.txt || true
+          wc -l seen_links.txt || true
+          tail -n 5 seen_links.txt || true
+
+        - name: Save seen_links.txt cache
+        uses: actions/cache/save@v4
         with:
           path: seen_links.txt
-          key: orbitways-seen-links
+          key: seen-links-${{ runner.os }}-${{ hashFiles('seen_links.txt') }}
+
