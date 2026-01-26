@@ -2,9 +2,7 @@ name: Orbitways Daily News (RSS → PDF → Email)
 
 on:
   schedule:
-    # GitHub cron is UTC. Example: 06:35 Paris (winter = UTC+1) -> 05:35 UTC.
-    # Adjust as needed.
-    - cron: "0 7 * * *"
+    - cron: "0 7 * * *"   # NOTE: UTC. 07:00 UTC is NOT 07:00 Paris.
   workflow_dispatch:
 
 jobs:
@@ -26,8 +24,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Optional but useful: persist seen_links.txt across runs (otherwise dedup resets daily)
-        - name: Restore seen_links.txt cache
+      - name: Restore seen_links.txt cache
         uses: actions/cache/restore@v4
         with:
           path: seen_links.txt
@@ -69,9 +66,8 @@ jobs:
           wc -l seen_links.txt || true
           tail -n 5 seen_links.txt || true
 
-        - name: Save seen_links.txt cache
+      - name: Save seen_links.txt cache
         uses: actions/cache/save@v4
         with:
           path: seen_links.txt
           key: seen-links-${{ runner.os }}-${{ hashFiles('seen_links.txt') }}
-
