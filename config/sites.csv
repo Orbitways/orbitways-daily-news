@@ -17,4 +17,4 @@ spacefoundation	    https://www.spacefoundation.org/   	h2 a	https://www.spacefo
 satellitetoday	    https://www.satellitetoday.com/   	h2 a	https://www.satellitetoday.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
 spacewatch	    https://spacewatch.global/   	h2 a	https://spacewatch.global/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
 breakdefense	    https://breakingdefense.com/category/space/   	h2 a	https://breakingdefense.com/category/space/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
-
+spaceintelreport	    https://www.spaceintelreport.com/   	h2 a	https://www.spaceintelreport.com/  	(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1	2}	\s+\d{4}""""	3
