@@ -1,0 +1,8 @@
+# Orbitways weekly newsletter recipients
+# Add one email address per line.
+# Lines starting with # are ignored.
+# Example:
+# firstname.lastname@orbitways.com
+
+julien.vaudolon@orbitways.com
+alexandre.guglielmi@orbitways.com
